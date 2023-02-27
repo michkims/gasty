@@ -20,15 +20,14 @@ from bootstrapdjangomorm import views
 
 
 
-urlpatterns = {
+urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('home/', views.Home),
-    path('services/', views.Services),
-    path('aboutus/', views.Aboutus),
-    path('contactus/', views.Contactus),
-    path('index/',views.Index),
-    path('portfolio/',views.Portfolio)
+    path('home/', views.Home,name='my-home'),
+    path('services/', views.Services,name='my-services'),
+    path('aboutus/', views.Aboutus,name='my-aboutus'),
+    path('contactus/', views.Contactus,name='my-contactus'),
+    path('index/', views.Index,name='my-index'),
+    path('portfolio/', views.Portfolio,name='my-portfolio'),
 
-
-}
+]
